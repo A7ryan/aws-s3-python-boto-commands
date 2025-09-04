@@ -1,0 +1,32 @@
+i. Make sure you have installed AWS CLI on your pc before running code.
+
+ii. Your IAM User Policy should have at least this permissions:
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::<bucket-name>",
+                "arn:aws:s3:::<bucket-name>/*"
+            ]
+        }
+    ]
+}
+
+
+iii. Create Access Key (AWS CLI) for this User and store your Access ID and Secret Key
+
+iv. Run in terminal: aws configure 
+
+v. Enter Access ID and Secret Key
+
+vi. You are ready to go
+
+vii. For more info visit: https://github.com/boto/boto3
